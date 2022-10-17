@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from stores import get_store_items, create_store_item, update_store_item, delete_store_item
+from stores.views import get_store_items, create_store_item, update_store_item, delete_store_item
 
 from stores import views as store_views
 urlpatterns = [

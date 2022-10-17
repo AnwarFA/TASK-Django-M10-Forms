@@ -4,4 +4,3 @@ class StoreItemForm(forms.ModelForm):
     class Meta:
         model = StoreItem
         fields = ["name", "description", "Kind", "Price"]
-
