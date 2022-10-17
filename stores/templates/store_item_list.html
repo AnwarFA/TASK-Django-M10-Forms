@@ -18,6 +18,7 @@
         <a class="navbar-brand">WAM Store</a>
         <button class="d-flex btn btn-outline-light" type="submit">
           Add Item
+          <a href="{% url 'delete-store-item' item_id=item.id %}">Delete</a>
         </button>
       </div>
     </nav>

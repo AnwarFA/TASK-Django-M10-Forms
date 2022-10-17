@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <body>
+            <h1>The Updated Product</h1>
+            <form
+            action="{% url 'update-store-item' item_id=store_item.id %}"
+            method="POST"
+        >
+            {% csrf_token %}
+            {{form}}
+            <button type=submit>Add</button>
+            </form>
+        </body>
+    </head>
+</html>

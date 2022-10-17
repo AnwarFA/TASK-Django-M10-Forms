@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from stores import get_store_items, create_store_item, update_store_item, delete_store_item
 
 from stores import views as store_views
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("items/", store_views.get_store_items, name="store-item-list"),
+    path("items/add/", store_views.create_store_item, name="create-store-item"),
+    path("items/update/<int:item_id>/",store_views.update_store_item, name="update_store_item"),
+    path("items/delete/<int:item_id>/",store_views.delete_store_item, name="delete_store_item"),
 ]
